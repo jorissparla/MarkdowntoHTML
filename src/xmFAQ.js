@@ -19,12 +19,35 @@ query q {
 `;
 
 const mutation = `
-mutation u ($id:ID!, $text: String, $localizations: String) {
-  updateMaintenanceFAQ(input: {id:$id, text:$text, localizations:$localizations}) {
-    id
-    text
-    localizations
-  }
+mutation MUTATION_UPDATE_MAINTENANCE(   $id: ID!,
+  $checksrequired: String,
+  $solutions: String,
+  $defects: String,
+  $data_corruption:String,
+  $portingset: String,
+  $communication:String,
+  $checklink: String){
+updateMaintenance(input: {
+   id: $id,
+  
+  checksrequired: $checksrequired,
+  solutions: $solutions,
+  defects: $defects,
+  data_corruption: $data_corruption,
+  portingset: $portingset,
+  communication: $communication,
+  checklink: $checklink
+}) {
+   id
+  version
+  checksrequired
+  solutions
+  defects
+  data_corruption
+  portingset
+  communication
+  checklink
+}
 }
 `;
 
