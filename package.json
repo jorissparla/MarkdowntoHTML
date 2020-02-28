@@ -1,0 +1,17 @@
+{
+  "name": "md_to_html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Joris Sparla <joris.sparla@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-request": "^1.8.2",
+    "remarkable": "^2.0.0",
+    "showdown": "^1.9.1"
+  }
+}
